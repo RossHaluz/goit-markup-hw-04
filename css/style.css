@@ -36,6 +36,18 @@ img {
   display: block;
   height: auto;
 }
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+ } 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -121,7 +133,9 @@ img {
 
 /* Hero */
 .hero {
-  background-color: var(--hero-bg-color);
+  background-image: url("../image/hero.jpg");
+  max-width: 1600px;
+  min-height: 600px;
   text-align: center;
   padding: 200px 0;
 }
