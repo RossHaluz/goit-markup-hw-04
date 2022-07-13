@@ -6,6 +6,7 @@
   --bg-main-color: #fff; /* Основний фон сайта */
   --second-bg-color: #f5f4fa; /* Додатковий колір фона */
   --hero-bg-color: #2f303a; /* Фон для Hero і Footer */
+  --color-soacial: #afb1b8; /*Колір іконок до соц. мереж*/
 }
 
 body {
@@ -62,10 +63,9 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  border-bottom: 1px solid #ececec;
 }
-.header-bottom {
-  border: 1px solid #ececec;
-}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -111,6 +111,7 @@ img {
 }
 .contacts-header {
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 .contacts-item {
@@ -119,9 +120,18 @@ img {
 .contacts-item:last-child {
   margin-right: 0;
 }
-.contacts-header a:hover,
-.contacts-header a:focus {
+.contact-link {
+  padding: 32px 0;
+  display: inline-flex;
+  align-items: center;
+}
+.contact-link:hover,
+.contact-link:focus {
   color: var(--hover-text-color);
+}
+.contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 .list {
   list-style: none;
@@ -175,28 +185,15 @@ img {
 .advantages-iteam {
   flex-basis: calc((100% - 90px) / 4);
 }
-.advantages-iteam::before {
-  content: "";
-  display: block;
-  height: 120px;
+.advantages-icon {
+  width: 70px;
+  height: 70px;
+}
+.advantages-thumb {
+  padding: 12px 100px;
   background-color: var(--second-bg-color);
   border-radius: 4px;
   margin-bottom: 30px;
-  background-size: 70px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.icon-details::before {
-  background-image: url(../image/antenna.svg);
-}
-.icon-punctuality::before {
-  background-image: url(../image/clock.svg);
-}
-.icon-planning::before {
-  background-image: url(../image/diagram.svg);
-}
-.icon-astronaut::before {
-  background-image: url(../image/astronaut.svg);
 }
 .advantages-title {
   margin-top: 0;
@@ -262,6 +259,60 @@ img {
 .taem-wrapper {
   padding: 30px;
 }
+.team-soicial-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: center;
+}
+.team-soicial-link {
+  display: inline-flex;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.white-icon {
+  justify-content: center;
+  fill: #afb1b8;
+  background-color: var(--bg-main-color);
+}
+.team-soicial-icon {
+  width: 20px;
+  height: 20px;
+}
+.team-soicial-link:hover,
+.team-soicial-link:focus {
+  fill: var(--white-text-color);
+  background-color: var(--hover-text-color);
+}
+
+/* Partners */
+.partners-list {
+  display: flex;
+  gap: 30px;
+}
+.partners-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.partners-link {
+  border: 1px solid #afb1b8;
+  fill: #afb1b8;
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+.partners-icon {
+  width: 106px;
+  height: 60px;
+}
+.partners-link:hover,
+.partners-link:focus {
+  fill: var(--hover-text-color);
+  border-color: var(--hover-text-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 
 /* Footer */
 .footer {
@@ -289,6 +340,22 @@ img {
 
 .footer-address-item:not(:last-child) {
   margin-bottom: 9px;
+}
+.footer-flex-conteiner {
+  gap: 70px;
+  display: flex;
+}
+.footer-join {
+  text-transform: uppercase;
+  color: var(--white-text-color);
+  line-height: calc(16 / 14);
+}
+.dark-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--white-text-color);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Портфоліо */
