@@ -7,6 +7,7 @@
   --second-bg-color: #f5f4fa; /* Додатковий колір фона */
   --hero-bg-color: #2f303a; /* Фон для Hero і Footer */
   --color-soacial: #afb1b8; /*Колір іконок до соц. мереж*/
+  --color-icons: #afb1b8; /*Колір іконок*/
 }
 
 body {
@@ -191,7 +192,10 @@ img {
   height: 70px;
 }
 .advantages-thumb {
-  padding: 12px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
   background-color: var(--second-bg-color);
   border-radius: 4px;
   margin-bottom: 30px;
@@ -273,7 +277,7 @@ img {
   height: 44px;
   border-radius: 50%;
   justify-content: center;
-  fill: #afb1b8;
+  fill: var(--color-icons);
   background-color: rgba(255, 255, 255, 0.1);
 }
 .team-soicial-icon {
@@ -287,19 +291,17 @@ img {
 }
 
 /* Partners */
-.partners .card-set {
-  flex-wrap: nowrap;
-}
 .partners-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  flex-basis: calc((100% - 150px) / 6);
 }
 .partners-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--color-soacial);
-  fill: #afb1b8;
+  fill: var(--color-icons);
   border-radius: 4px;
-  padding: 16px 32px;
+  padding: 16px;
 }
 .partners-icon {
   width: 106px;
